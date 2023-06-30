@@ -10,5 +10,8 @@ namespace MedidorModel.DAL
     public interface ILecturasDAL
     {
         List<Lectura> ObtenerLecturas();
+
+        void Eliminar(string rut);
     }
+
 }

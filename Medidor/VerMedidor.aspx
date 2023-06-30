@@ -10,7 +10,7 @@
                 </div>
                 <div class="card-body">
                     <asp:GridView CssClass="table table-hover table-bordered" runat="server" 
-                         OnRowCommand="grillaCliente_RowCommand"
+                        < OnRowCommand="grillaCliente_RowCommand" 
                          AutoGenerateColumns="false" ID="grillaCliente">
                         <Columns>
                             <asp:BoundField DataField="Rut" HeaderText="Rut del Cliente" />
