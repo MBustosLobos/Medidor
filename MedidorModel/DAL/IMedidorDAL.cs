@@ -9,8 +9,8 @@ namespace MedidorModel.DAL
 {
     public interface IMedidorDAL
     {
-        List<Medidor> ObtenerMedidor();
-        void AgregarMedidor(Medidor medidor);
+        List<TipoMedidor> ObtenerMedidor();
+        void AgregarMedidor(TipoMedidor medidor);
         
      //Eliminar
         void Eliminar(string rut);

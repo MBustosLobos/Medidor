@@ -15,26 +15,57 @@
                     <div class="form-group">
                         <label for="nombreTxt">Número Medidor</label>
                         <asp:TextBox ID="nroMedidor" CssClass="form-control" runat="server"></asp:TextBox>
-                    </div>
-                    <div class="form-group">
-                        <label for="rutTxt">Rut</label>
-                        <asp:TextBox ID="rutTxt" CssClass="form-control" runat="server"></asp:TextBox>
-                    </div>
-                    <div class="form-group">
-                        <label for="lecturaTxt">Lectura</label>
-                        <asp:TextBox ID="lecturaTxt" CssClass="form-control" runat="server"></asp:TextBox>
-                    </div>
-                    <div class="form-group">
 
-                        <div class="form-group">
-                        <asp:Button runat="server" ID="btnAgregar" OnClick="btnAgregar_Click" Text="Agregar" CssClass="btn btn-primarty btn-lg" />
+                        <div>
+                            <label for="calendar 1" > Seleccione la fecha de la lectura</label>
+                            <asp:Calendar ID="calendar1" runat="server">
 
+                                <OtherMonthDayStyle ForeColor="LightGray"></OtherMonthDayStyle>
+
+                                <TitleStyle BackColor="Blue"
+                                    ForeColor="White"></TitleStyle>
+
+                                <DayStyle BackColor="gray"></DayStyle>
+
+                                <SelectedDayStyle BackColor="LightGray"
+                                    Font-Bold="True"></SelectedDayStyle>
+
+                            </asp:Calendar>
                         </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="lecturaTxt">Lectura en kw/h</label>
+                        <asp:TextBox ID="lecturaTxt" CssClass="form-control" runat="server"></asp:TextBox>
+                     
+                    </div>
+                    <div class="form-group">
+                        <label for="horaTxt">Hora de la lectura</label>
+                        <asp:TextBox ID="horaTxt" CssClass="form-control" runat="server"></asp:TextBox>
+                      
+                    </div>
+                    <div class="form-group">
+                        <label for="minutoTxt">Minuto de la lectura</label>
+                        <asp:TextBox ID="minutoTxt" CssClass="form-control" runat="server"></asp:TextBox>
+                         
+                    </div>
+                    <div class="form-group">
+                        <label for="bebidaDbl">Tipo de medidor</label>
+                        
+                        <asp:DropDownList runat="server" ID="medidorDbl" CssClass="form-select" AppendDataBoundItems="true">
+                            <asp:ListItem Text="Seleccione una opción"></asp:ListItem>
+
+                        </asp:DropDownList>
+                    </div>                 
+
+                    <div class="form-group">
+                        <asp:Button runat="server" ID="btnAgregar" OnClick="btnAgregar_Click" Text="Agregar" CssClass="btn btn-primary btn-lg" />
+
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
 
 
 </asp:Content>

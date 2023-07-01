@@ -28,16 +28,6 @@ namespace Medidor
                 List<Lectura> lecturas = lecturasDAL.ObtenerLecturas();
 
             }
-
-            protected void grillaCliente_RowCommand(object sender, GridViewCommandEventArgs e)
-            {
-                if (e.CommandName == "elimina")
-                {
-                    string rut = Convert.ToString(e.CommandArgument);
-                    lecturasDAL.Eliminar(rut);
-                    cargagrilla();
-                }               
-            }
         }
     }
 }

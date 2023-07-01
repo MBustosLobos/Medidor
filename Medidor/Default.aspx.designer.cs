@@ -33,13 +33,13 @@ namespace Medidor
         protected global::System.Web.UI.WebControls.TextBox nroMedidor;
 
         /// <summary>
-        /// Control rutTxt.
+        /// Control calendar1.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox rutTxt;
+        protected global::System.Web.UI.WebControls.Calendar calendar1;
 
         /// <summary>
         /// Control lecturaTxt.
@@ -49,6 +49,33 @@ namespace Medidor
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox lecturaTxt;
+
+        /// <summary>
+        /// Control horaTxt.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox horaTxt;
+
+        /// <summary>
+        /// Control minutoTxt.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox minutoTxt;
+
+        /// <summary>
+        /// Control medidorDbl.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList medidorDbl;
 
         /// <summary>
         /// Control btnAgregar.

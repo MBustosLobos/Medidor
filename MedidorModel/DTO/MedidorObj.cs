@@ -7,9 +7,10 @@ using System.Threading.Tasks;
 namespace MedidorModel.DTO
 
 {
-    public class Medidor
+    public class TipoMedidor
     {
         private string rut;
+        private string tipo;
         private string nroMedidor;
         private string consumo;
         private Lectura mLectura;
@@ -19,5 +20,6 @@ namespace MedidorModel.DTO
         public string NroMedidor { get => nroMedidor; set => nroMedidor = value; }
         public string Consumo { get => consumo; set => consumo = value; }
         public Lectura MLectura { get => mLectura; set => mLectura = value; }
+        public string Tipo { get => tipo; set => tipo = value; }
     }
 }

@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Web.DynamicData;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
@@ -16,7 +17,15 @@ namespace Medidor
         private IMedidorDAL medidorDAL = new MedidorDALObjetos();
         protected void Page_Load(object sender, EventArgs e)
         {
-           
+            if (!IsPostBack)
+            {
+                List<TipoMedidor> medidors = medidorDAL.ObtenerMedidor();
+                this.medidorDbl.DataSource = medidors;
+                this.medidorDbl.DataTextField = "Tipo";
+                this.medidorDbl.DataBind();
+            }
+
+
 
 
         }
@@ -26,22 +35,27 @@ namespace Medidor
             
                 //1. Obtener los datos del fomulario
                 string nroMedidor = this.nroMedidor.Text.Trim();
-                string rut = this.rutTxt.Text.Trim();
+                string rut = this.lecturaTxt.Text.Trim();
+
+              //DropDown
+                string tipoMedidortxt = this.medidorDbl.SelectedItem.Text;
+                //objeto TipoMedidor
+                 List<TipoMedidor> medidors = medidorDAL.ObtenerMedidor();
+                 TipoMedidor medidores = medidors.Find(b => b.Tipo == this.medidorDbl.SelectedItem.Value);
+
+
+               List<Lectura> lecturas = lecturasDAL.ObtenerLecturas();
 
 
 
-                List<Lectura> lecturas = lecturasDAL.ObtenerLecturas();
 
-            var medidor = new MedidorModel.DTO.Medidor()
-            {
-                NroMedidor = nroMedidor,
-                Rut = rut,
-              
-            };
-           
-                //3. Llamar al DAL
-                medidorDAL.AgregarMedidor(medidor);
-                //4. Mostrar mensaje de exito
+                 TipoMedidor medidorObj = new TipoMedidor()
+                 {               
+                    NroMedidor = nroMedidor,
+                    Tipo= tipoMedidortxt
+                 };
+                
+            // mensaje de éxito
                 this.mensajesLbl.Text = "Medidor Guardado Correctamente";
                 Response.Redirect("VerMedidor.aspx");
             
