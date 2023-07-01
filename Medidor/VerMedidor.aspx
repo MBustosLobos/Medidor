@@ -9,13 +9,17 @@
                     <h3>Ver Medidores</h3>
                 </div>
                 <div class="card-body">
-                    <asp:GridView CssClass="table table-hover table-bordered" runat="server" 
-                        < OnRowCommand="grillaCliente_RowCommand" 
-                         AutoGenerateColumns="false" ID="grillaCliente">
+                    <asp:GridView CssClass="table table-hover table-bordered" runat="server" AutoGenerateColumns="true" ID="grillaCliente">
                         <Columns>
                             <asp:BoundField DataField="Rut" HeaderText="Rut del Cliente" />
                             <asp:BoundField DataField="nroMedidor" HeaderText="Número del medido" />
-                            <asp:BoundField DataField="lecturaTxt" HeaderText="Lecturas"/>
+                            <asp:BoundField DataField="lecturaTxt" HeaderText="Lecturas" />
+                            <asp:TemplateField>
+                                <ItemTemplate>
+                                    <asp:Button CommandName="elimina" CommandArgument='<%# Eval("Rut") %>'
+                                        runat="server" CssClass="btn btn-danger" Text="Eliminar" />
+                                </ItemTemplate>
+                            </asp:TemplateField>
                         </Columns>
                     </asp:GridView>
                 </div>
